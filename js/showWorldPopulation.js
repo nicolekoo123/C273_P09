@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $.ajax({
-        url: "http://localhost/C273/P09/C273_P09/getStatistics.php",
+        url: "https://cloudninep09.azurewebsites.net/getStatistics.php",
         cache: false,
         dataType: "JSON",
         success: function (response) {
