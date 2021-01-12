@@ -1,15 +1,14 @@
 $(document).ready(function () {
     $.ajax({
-        type: "GET",
-        url: "http://localhost/C273/P09/C273_P09/getCountryDetails.php",
+        url: "http://localhost/C273/P09/C273_P09/getStatistics.php",
         cache: false,
         dataType: "JSON",
         success: function (response) {
             var countryArr = [];
             var populationArr = [];
             for (i = 0; i < response.length; i++){
-                countryArr.append(response.country);
-                populationArr.append(response.population)
+                countryArr.push(response[i].country);
+                populationArr.push(response[i].population)
             }
             var barChart = new Chart($("#barChart"), {
                 type: 'horizontalBar',
